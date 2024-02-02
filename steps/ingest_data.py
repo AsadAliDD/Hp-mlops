@@ -18,12 +18,12 @@ class InjestData:
     def get_data(self):
         '''Reads data from the given path and returns a pandas dataframe'''
         logging.info(f"Reading data from {self.path}")
-        return pd.read_csv(self.path)
+        return pd.read_csv(self.path,delimiter=';')
 
 
 
 @step
-def injest_data(data_path: str) -> pd.DataFrame:
+def injest_df(data_path: str) -> pd.DataFrame:
     """
     Injest data from the given path and return a pandas dataframe
 

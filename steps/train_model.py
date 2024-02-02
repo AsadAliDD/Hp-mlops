@@ -5,7 +5,7 @@ from zenml import step
 
 
 @step
-def train_model() -> None:
+def train(df: pd.DataFrame) -> None:
     """
     Trains the model and saves it to the model directory
     """

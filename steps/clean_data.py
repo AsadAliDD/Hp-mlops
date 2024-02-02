@@ -4,7 +4,7 @@ from zenml import step
 
 
 @step
-def clean_data() -> pd.DataFrame:
+def clean_df(df: pd.DataFrame) -> None:
     """
     Cleans the data and returns a pandas dataframe
 
