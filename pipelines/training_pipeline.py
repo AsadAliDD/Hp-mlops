@@ -9,6 +9,6 @@ from steps.evaluate_model import evaluate
 @pipeline
 def train_pipeline(data_path:str):
     df=injest_df(data_path)
-    clean_df(df)
-    train(df)
-    evaluate(df)
+    X_train,X_test,y_train,y_test=clean_df(df)
+    model=train(X_train,X_test,y_train,y_test)
+    accuracy=evaluate(model,X_test,y_test)
